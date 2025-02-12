@@ -34,10 +34,11 @@ public class Book {
 		this.ISBN = book.ISBN;
 		this.price = book.price;
 	}
-	
+
+	@Override
 	public String toString()
 	{
-		return "BookClass [title =" + title +  ", author = " + author + ", ISBN = " + ISBN + ", Price = " + price +"]";
+		return title + " by " + author + " (ISBN: " + ISBN + ", $" + price + ")";
 		
 	}
 	
