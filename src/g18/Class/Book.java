@@ -14,7 +14,6 @@ public class Book {
 		this.ISBN = "Unknown";
 		this.price = 0.0;
 	}
-	
 	/**
 	 * This is a parameterized constructor that sets all the attributes.
 	 * @param title
@@ -45,9 +44,8 @@ public class Book {
 		this.author = other.author;
 		this.ISBN = other.ISBN;
 		this.price = other.price;
-	}
-	
-	/**
+	}	
+/**
 	 * This is a parameterized equals method that checks to see if two books have the same ISBN. 
 	 * @param other
 	 * 			This argument is a book object to compare against
@@ -73,7 +71,6 @@ public class Book {
 		return title + " by " + author + " (ISBN: " + ISBN + ", $" + price + ")";
 	}
 
-	
 	public String getTitle() {
 		return title;
 	}
