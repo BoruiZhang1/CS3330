@@ -1,9 +1,9 @@
 package g18;
 
-import g18.Class.Book;
+import g18.Class.Book; 
 import g18.Class.Library;
 
-public class Main {
+public class LibraryApp {
 
 	public static void main(String[] args) {
 		// Creates a new Library object
