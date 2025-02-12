@@ -1,4 +1,4 @@
-package g18.library;
+package g18.Class;
 /**
  * 
  * library will manage the book collection
@@ -10,7 +10,7 @@ public class Library
 	private Book[] books;
 	private int count;
 	
-	//constructor
+	//default constructor
 	public Library() 
 	{
 			
@@ -19,16 +19,30 @@ public class Library
 	}
 	
 	//to add a book to collection ,if max amount of books reached return false, else we add the book and increase book counts
-	public boolean addBook(Book add) 
+	/**
+	 * 
+	 * @param book
+	 * 		  book is the object we are adding
+	 * @return
+	 * 		  True if the book was added successfully
+	 * 		  False if the parameter check failed(book to be added is null or the book array is full) or there is a duplicate, i.e. failure to add book
+	 */
+	public boolean addBook(Book book) 
 	{
 		
-		if(books.length >= count) return false;
-			else 
+		if(books.length >= count || book == null) return false;
+			
+			for(int i = 0; i < count; i++)
 			{
-			books[count] = add;
+				if(books[i].equals(book))
+				{
+					return false;
+				}
+			}
+			books[count] = new Book(book);
 			count++;
 			return true;
-			}
+			
 	}
 	
 	//to remove a book from collection, returns true if book found and removed and false when book is not found
