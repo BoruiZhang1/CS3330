@@ -18,8 +18,7 @@ public class Library
 		count = 0;
 	}
 	
-	//to add a book to collection ,if max amount of books reached return false, else we add the book and increase book counts
-	/**
+	/** This is a method to add a book to collection ,if max amount of books reached return false, else we add the book and increase book counts
 	 * 
 	 * @param book
 	 * 		  book is the object we are adding
@@ -45,7 +44,7 @@ public class Library
 			
 	}
 	
-	/** this is a method to remove a book from collection
+	/** This is a method to remove a book from collection
 	 * 
 	 * @param book
 	 * 		  book is the object we are looking to remove
