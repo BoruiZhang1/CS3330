@@ -27,12 +27,33 @@ public class Book {
 	}
 	
 	// copy constructor
-	public Book(BookClass book)
+	public Book(Book book)
 	{
 		this.title = book.title;
 		this.author = book.author;
 		this.ISBN = book.ISBN;
 		this.price = book.price;
+	}
+
+	/**
+	 * This is a parameterized equals method that checks to see if two books have the same ISBN. 
+	 * @param other
+	 * 			This argument is a book object to compare against
+	 * @return
+	 * 			Returns true if two books have the same ISBN. 
+	 * 			Returns false if two books do not have the same ISBN.
+	 */
+	@Override
+	public boolean equals(Object other) {
+		if(other == null) {
+			return false;
+		}
+		if(this.ISBN.equals(((Book)other).ISBN)) {
+			return true;
+		}
+		else {
+			return false;
+		}
 	}
 
 	@Override
