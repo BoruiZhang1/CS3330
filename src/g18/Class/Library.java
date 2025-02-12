@@ -97,12 +97,25 @@ public class Library
 		}
 		return null;
 	}
+	/**
+	 * This method displays the books using toStrting
+	 * 
+	 * 
+	 */
+	
 	
 	public void displayBooks()
 	{
+		if(count == 0)
+		{
+			System.out.println("Library is empty.");
+			return;
+		}
+		
+		System.out.println("All books in the library:");
 		for(int i = 0; i < count; i++)
 		{
-			System.out.println(books[i].toString());
+			System.out.println((i+1) + ". " + books[i].toString());
 		}
 	}
 	
