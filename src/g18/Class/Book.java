@@ -1,14 +1,12 @@
 package g18.Class;
 
-
 public class Book {
-	
 	private String title;
 	private String author;
 	private String ISBN;
 	private double price;
 	
-	// default construct
+	// default constructor
 	public Book()
 	{
 		this.title ="Unknown";
@@ -18,50 +16,64 @@ public class Book {
 	}
 	
 	// construct to take in value 
-	public Book(String title, String author, String ISBN, double price)
-	{
-		this.title = title;
-		this.author = author;
-		this.ISBN = ISBN;
-		this.price = price;
-	}
-	
-	// copy constructor
-	public Book(Book book)
-	{
-		this.title = book.title;
-		this.author = book.author;
-		this.ISBN = book.ISBN;
-		this.price = book.price;
-	}
-
 	/**
-	 * This is a parameterized equals method that checks to see if two books have the same ISBN. 
-	 * @param other
-	 * 			This argument is a book object to compare against
-	 * @return
-	 * 			Returns true if two books have the same ISBN. 
-	 * 			Returns false if two books do not have the same ISBN.
+	 * This is a parameterized constructor that sets all the attributes.
+	 * @param title
+	 * 			This argument is the title of the book
+	 * @param author
+	 * 			This argument is the author of the book
+	 * @param ISBN
+	 * 			This argument is the ISBN of the book
+	 * @param price
+	 * 			This argument is the price of the book
 	 */
-	@Override
-	public boolean equals(Object other) {
-		if(other == null) {
-			return false;
+		public Book(String title, String author, String ISBN, Double price)
+		{
+			this.title = title;
+			this.author = author;
+			this.ISBN = ISBN;
+			this.price = price;
 		}
-		if(this.ISBN.equals(((Book)other).ISBN)) {
-			return true;
-		}
-		else {
-			return false;
-		}
-	}
-
-	@Override
-	public String toString()
-	{
-		return title + " by " + author + " (ISBN: " + ISBN + ", $" + price + ")";
 		
-	}
+		// copy constructor
+		/**
+		 * This is a parameterized copy constructor that creates a new Book object from another Book.
+		 * @param other
+		 * 			This argument is a book object that is being copied
+		 */
+		public Book(Book other)
+		{
+			this.title = other.title;
+			this.author = other.author;
+			this.ISBN = other.ISBN;
+			this.price = other.price;
+		}
+		
+		/**
+		 * This is a parameterized equals method that checks to see if two books have the same ISBN. 
+		 * @param other
+		 * 			This argument is a book object to compare against
+		 * @return
+		 * 			Returns true if two books have the same ISBN. 
+		 * 			Returns false if two books do not have the same ISBN.
+		 */
+		@Override
+		public boolean equals(Object other)
+		{
+			Book book = (Book) other;
+			if(this == other)
+			{
+				return true;
+			}
+			
+			return this.ISBN.equals(book.ISBN);
+		}
+		
+		@Override
+		public String toString() {
+			return title + " by " + author + " (ISBN: " + ISBN + ", $" + price + ")";
+		}
+	
 	
 	public String getTitle() {
 		return title;
