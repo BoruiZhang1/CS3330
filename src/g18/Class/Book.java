@@ -45,7 +45,7 @@ public class Book {
 		this.ISBN = other.ISBN;
 		this.price = other.price;
 	}	
-/**
+	/**
 	 * This is a parameterized equals method that checks to see if two books have the same ISBN. 
 	 * @param other
 	 * 			This argument is a book object to compare against
