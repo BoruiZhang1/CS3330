@@ -6,7 +6,7 @@ public class Book {
 	private String title;
 	private String author;
 	private String ISBN;
-	private Double price;
+	private double price;
 	
 	// default construct
 	public Book()
@@ -18,7 +18,7 @@ public class Book {
 	}
 	
 	// construct to take in value 
-	public Book(String title, String author, String ISBN, Double price)
+	public Book(String title, String author, String ISBN, double price)
 	{
 		this.title = title;
 		this.author = author;
@@ -81,10 +81,10 @@ public class Book {
 	public void setISBN(String iSBN) {
 		ISBN = iSBN;
 	}
-	public Double getPrice() {
+	public double getPrice() {
 		return price;
 	}
-	public void setPrice(Double price) {
+	public void setPrice(double price) {
 		this.price = price;
 	}
 }
