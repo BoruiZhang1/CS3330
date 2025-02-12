@@ -30,7 +30,7 @@ public class Library
 	public boolean addBook(Book book) 
 	{
 		
-		if(books.length >= count || book == null) return false;
+		if(count >= books.length || book == null) return false;
 			
 			for(int i = 0; i < count; i++)
 			{
@@ -65,7 +65,7 @@ public class Library
 			//once the book is found everything will shift to the left
 			if(books[i].equals(book)) 
 			{
-				for(int j = 0; j < count; j++) 
+				for(int j = i; j < count - 1; j++) 
 				{
 					books[j] = books[j+1];
 				}
