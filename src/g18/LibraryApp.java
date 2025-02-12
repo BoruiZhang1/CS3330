@@ -1,7 +1,7 @@
-package assignment1;
+package g18;
 
-import assignment1.librarysystem.Book;
-import assignment1.librarysystem.Library;
+import g18.Class.Book;
+import g18.Class.Library;
 
 public class Main {
 
