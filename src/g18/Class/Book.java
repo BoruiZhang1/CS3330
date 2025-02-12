@@ -16,6 +16,17 @@ public class Book {
 	}
 	
 	// construct to take in value 
+	/**
+	 * This is a parameterized constructor that sets all the attributes.
+	 * @param title
+	 * 			This argument is the title of the book
+	 * @param author
+	 * 			This argument is the author of the book
+	 * @param ISBN
+	 * 			This argument is the ISBN of the book
+	 * @param price
+	 * 			This argument is the price of the book
+	 */
 		public Book(String title, String author, String ISBN, Double price)
 		{
 			this.title = title;
@@ -25,6 +36,11 @@ public class Book {
 		}
 		
 		// copy constructor
+		/**
+		 * This is a parameterized copy constructor that creates a new Book object from another Book.
+		 * @param other
+		 * 			This argument is a book object that is being copied
+		 */
 		public Book(Book other)
 		{
 			this.title = other.title;
@@ -33,6 +49,14 @@ public class Book {
 			this.price = other.price;
 		}
 		
+		/**
+		 * This is a parameterized equals method that checks to see if two books have the same ISBN. 
+		 * @param other
+		 * 			This argument is a book object to compare against
+		 * @return
+		 * 			Returns true if two books have the same ISBN. 
+		 * 			Returns false if two books do not have the same ISBN.
+		 */
 		@Override
 		public boolean equals(Object other)
 		{
