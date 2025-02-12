@@ -45,9 +45,19 @@ public class Library
 			
 	}
 	
-	//to remove a book from collection, returns true if book found and removed and false when book is not found
+	/** this is a method to remove a book from collection
+	 * 
+	 * @param book
+	 * 		  book is the object we are looking to remove
+	 * @return 
+	 *        true if book is removed successfully
+	 *        false if book failed param check, or the book cannot be found. (Book removal failure as a whole)
+	 * 
+	 */
 	public boolean removeBook(Book book) 
 	{
+		if(book == null) return false;
+		
 		//iterate thru array to find book to remove
 		for(int i = 0; i < count; i++)
 		{
@@ -66,14 +76,23 @@ public class Library
 		return false;
 	}
 	
-	//functionality is in the name
+	/** This method searchs for books via ISBN
+	 * 
+	 * @param ISBN
+	 *		  ISBN of the book to be searched
+	 * @return
+	 * 		  returns the book found if ISBN matches with existing books
+	 * 		  returns null if the book cannot be found with said ISBN or ISBN passed in was invalid
+	 */
 	public Book searchByISBN(String ISBN)
 	{
+		if(ISBN == null) return null;
+		//iterates through book collection to try to match ISBN
 		for(int i = 0; i < count; i++)
 		{
 			if(books[i].getISBN().equals(ISBN))
 			{
-				return books[i];
+				return new Book(books[i]);
 			}
 		}
 		return null;
