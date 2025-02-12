@@ -1,7 +1,7 @@
-package BookClass;
+package g18.Class;
 
 
-public class BookClass {
+public class Book {
 	
 	private String title;
 	private String author;
@@ -9,7 +9,7 @@ public class BookClass {
 	private Double price;
 	
 	// default construct
-	public BookClass()
+	public Book()
 	{
 		this.title ="Unknown";
 		this.author = "Unknown";
@@ -18,7 +18,7 @@ public class BookClass {
 	}
 	
 	// construct to take in value 
-	public BookClass(String title, String author, String ISBN, Double price)
+	public Book(String title, String author, String ISBN, Double price)
 	{
 		this.title = title;
 		this.author = author;
@@ -27,7 +27,7 @@ public class BookClass {
 	}
 	
 	// copy constructor
-	public BookClass(BookClass book)
+	public Book(BookClass book)
 	{
 		this.title = book.title;
 		this.author = book.author;
