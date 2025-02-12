@@ -27,7 +27,7 @@ public class Book {
 	 * @param price
 	 * 			This argument is the price of the book
 	 */
-		public Book(String title, String author, String ISBN, Double price)
+		public Book(String title, String author, String ISBN, double price)
 		{
 			this.title = title;
 			this.author = author;
